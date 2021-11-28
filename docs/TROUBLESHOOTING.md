@@ -1,3 +1,5 @@
+# TROUBLESHOOTING
+
 Now, let's talk about some "issues" you can meet while using box'es.
 
 So at the beginning you will have problems when starting apps due to missing dependent libraries in native armhf/aarch64 versions or i386/amd64 if they are not wrapped.
