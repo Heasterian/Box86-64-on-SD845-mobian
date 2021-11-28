@@ -1,3 +1,5 @@
+# PREREQUISITES
+
 At the beginning we need to add multiarch and compile up to date Mesa in armhf and aarch64 versions as Turnip and Freedreno works often much better in newer versions.
 
 Add surce repository to your /etc/apt/sources.list in my case it's `deb-src http://deb.debian.org/debian/ bookworm main non-free` and armhf architecture to dpkg with `sudo dpkg --add-architecture armhf`
