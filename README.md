@@ -7,3 +7,5 @@ Everything is inside docs. Start them in following order.
 2. COMPILATION
 3. TROUBLESHOOTING
 4. App specific guides
+
+Feel free to open issues with sugestions or changes.
