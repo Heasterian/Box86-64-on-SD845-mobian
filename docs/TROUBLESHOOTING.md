@@ -20,3 +20,7 @@ If you can't find some libs as they are deprecated like libpng12-0, you can try 
 There are cases when you will see information about missing symbols, syscalls or opcode and app crashes after it. First you should do is updating your box86/64 source with `git pull` and build last version. If issue still happens on newest version of emulator, open issue on git about it.
 
 As box86 have lowest logging level set up, in case of crash you may want to run app with `BOX86_LOG=1` to see more informations about your situation before opening issue.
+
+# EDGE CASES
+
+There are two libs that are edge cases because you sometimes need one certain version of library to match required by app symbols: libssl.so and libcrypto.so. If you can find them in game directory, make sure that they are in BOX86_LD_LIBRARY_PATH or BOX86_LD_LIBRARY_PATH. They should work fine emulated and in mosta cases you don't need to search for certain version for ARM.
