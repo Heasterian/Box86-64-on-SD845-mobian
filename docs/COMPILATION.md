@@ -8,4 +8,4 @@ git clone https://github.com/ptitSeb/box86 && git clone https://github.com/ptitS
 
 Now restart systemd-binfmt so box86/64 will be called automatically `sudo systemctl restart systemd-binfmt`.
 
-Now you should be able to run some apps... Unless you arent missing some libs. In case of problems, go part of mu guide about troubleshooting.
+Now you should be able to run some apps... Unless you aren't missing some libs. In case of problems, go to the part of my guide about troubleshooting.

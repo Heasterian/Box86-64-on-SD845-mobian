@@ -15,12 +15,12 @@ If word "native" is misisng, it means you need to download i386 or amd64 version
 
 You can search packages with required lib files using `apt-file search` or this website: https://www.debian.org/distrib/packages
 
-If you can't find some libs as they are deprecated like libpng12-0, you can try to start app wihoout them using `BOX86_ALLOWMISSINGLIBS=1` environment variable. Some app won't work this way, but for example Half Life 2 works fine like this.
+If you can't find some libs as they are deprecated like libpng12-0, you can try to start app without them using `BOX86_ALLOWMISSINGLIBS=1` environment variable. Some app won't work this way, but for example Half Life 2 works fine like this.
 
-There are cases when you will see information about missing symbols, syscalls or opcode and app crashes after it. First you should do is updating your box86/64 source with `git pull` and build last version. If issue still happens on newest version of emulator, open issue on git about it.
+There are cases when you will see information about missing symbols, syscalls or opcode and the app crashes after it. First thing you should do is update your box86/64 source with `git pull` and build the latest version. If the issue still happens on newest version of emulator, open issue on git about it.
 
-As box86 have lowest logging level set up, in case of crash you may want to run app with `BOX86_LOG=1` to see more informations about your situation before opening issue.
+As box86 has the lowest logging level set up, in case of a crash you may want to run the app with `BOX86_LOG=1` to see more information about your situation before opening an issue.
 
 # EDGE CASES
 
-There are two libs that are edge cases because you sometimes need one certain version of library to match required by app symbols: libssl.so and libcrypto.so. If you can find them in game directory, make sure that they are in BOX86_LD_LIBRARY_PATH or BOX86_LD_LIBRARY_PATH. They should work fine emulated and in mosta cases you don't need to search for certain version for ARM.
+There are two libs that are edge cases because you sometimes need one certain version of library to match required by app symbols: libssl.so and libcrypto.so. If you can find them in game directory, make sure that they are in BOX86_LD_LIBRARY_PATH or BOX86_LD_LIBRARY_PATH. They should work fine emulated and in most cases you don't need to search for certain version for ARM.
