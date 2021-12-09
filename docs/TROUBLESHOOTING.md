@@ -24,3 +24,7 @@ As box86 has the lowest logging level set up, in case of a crash you may want to
 # EDGE CASES
 
 There are two libs that are edge cases because you sometimes need one certain version of library to match required by app symbols: libssl.so and libcrypto.so. If you can find them in game directory, make sure that they are in BOX86_LD_LIBRARY_PATH or BOX86_LD_LIBRARY_PATH. They should work fine emulated and in most cases you don't need to search for certain version for ARM.
+
+# COMMON ISSUE WITH STARTING GAMES
+
+Many games can have some issues with running fullscreen, specially with screen resolution other than phones native one. Try to find way to change it using some flag on in config file. I think that linux version of Witcher 2 at 720p unlocked for me changing resolution, but I'm not 100 sure :/
