@@ -18,4 +18,6 @@ To work correctly it also require cabextract to work so install it with this com
 
 If you didn't link wine binaries to /usr/local/bin/ , you need to point to wine binary with WINE environment variable. Also you need to use three more variables - BOX86_NOBANNER=1 BOX64_LOG=0 BOX64_NOBANNER=1 so you can run it with command like `WINE=~/wine/bin/wine BOX86_NOBANNER=1 BOX64_LOG=0 BOX64_NOBANNER=1 winetricks dxvk`
 
+Looks like freedreno reports only 10 MB of VRAM to Wine so you should set up more in Wine's registry if you use wined3d. It can be done with winetricks command `WINE=~/wine/bin/wine BOX86_NOBANNER=1 BOX64_LOG=0 BOX64_NOBANNER=1 winetricks videomemorysize=2048`
+
 Small info about DXVK. When I'm writing this article, Turnip in armhf version SIGBUS on calling vkResetQueryPoolEXT. 64-bit apps can run fine, but VK implementation is still experimental.
