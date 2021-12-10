@@ -32,3 +32,5 @@ And time to compile the driver. My meson config is very basic, if you know how t
 ```
 meson build64 -Dgallium-drivers=freedreno -Dvulkan-drivers=freedreno && ninja -C build64/ && sudo ninja -C build64/ install && meson build32 --cross-file=cross.txt --libdir=lib/arm-linux-gnueabihf -Dgallium-drivers=freedreno -Dvulkan-drivers=freedreno && ninja -C build32/ && sudo ninja -C build32/ install 
 ``` 
+
+Continue in [COMPILATION](https://github.com/Heasterian/Box86-64-on-SD845-mobian/blob/main/docs/COMPILATION.md)
