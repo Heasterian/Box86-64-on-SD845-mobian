@@ -1,6 +1,6 @@
 # WINE AND PROTON
 
-Compatibility of certain versions are changing all the time. At moment of writing this guide the last staging version that works for me is 5.9. Stable works fine from last build.
+Compatibility of certain versions are changing all the time. At moment of writing this guide the last staging version that works for me is 7.0 rc6. Stable works fine from last build.
 
 You can download precompiled binaries of pure Wine from PlayOnLinux automated builds: https://www.playonlinux.com/wine/binaries/phoenicis/
 You can find the Proton build here. Compatibility of versions in my testing matches that of Wine staging: https://github.com/GloriousEggroll/proton-ge-custom/releases
@@ -18,6 +18,6 @@ To work correctly it also require cabextract to work so install it with this com
 
 If you didn't link wine binaries to /usr/local/bin/ , you need to point to wine binary with WINE environment variable. Also you need to use three more variables - BOX86_NOBANNER=1 BOX64_LOG=0 BOX64_NOBANNER=1 so you can run it with command like `WINE=~/wine/bin/wine BOX86_NOBANNER=1 BOX64_LOG=0 BOX64_NOBANNER=1 winetricks dxvk`
 
-VK wrapping in box64 is really young so it can be unstable.
+VK wrapping in box64 is really young so it can be unstable, but looks like Turnip is working fine with FSR on both box86 and box64.
 
 If game or app don't want to start, enable Virtual Desktop in winecfg. It can help in many cases.
