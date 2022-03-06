@@ -18,4 +18,6 @@ STEAMOS=1 setarch -L linux32 ~/steam/usr/lib/steam/bin_steam.sh
 
 Wihout steamcmd to remove game files, delete game directory from `~/.steam/steam/steamapps/common/`
 
+At this moment I have issues with using native libSDL on Mobian. You can use `BOX86_EMULATED_LIBS=libSDL2-2.0.so.0` environment variable to use one shipped with Steam instead and still run Steam fine.
+
 If I'll have a time, I'll update it with steamcmd part.
