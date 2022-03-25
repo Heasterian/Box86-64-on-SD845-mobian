@@ -13,7 +13,7 @@ cd ~; mkdir steam; cd steam; wget http://media.steampowered.com/client/installer
 And than run it with command below:
 
 ```
-STEAMOS=1 setarch -L linux32 ~/steam/usr/lib/steam/bin_steam.sh
+STEAMOS=1 ~/steam/usr/lib/steam/bin_steam.sh
 ```
 
 Wihout steamcmd to remove game files, delete game directory from `~/.steam/steam/steamapps/common/`
