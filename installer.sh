@@ -18,7 +18,7 @@ if dialog --yesno "Do you want to set up multiarch and Box86 instead just Box64?
 fi
 if [[ "$MULTIARCH" == 1 ]];
   then 
-    if dialog --yesno "Do you want to install manually Steam i386 deb in /usr/ directory?" 0 0;
+    if dialog --yesno "Do you want to install manually Steam i386 deb in /usr/ directory? Dependencies are not included as they are changing so you still will need to install them manually." 0 0;
     then 
 	STEAM=1
   fi
