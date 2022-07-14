@@ -6,7 +6,7 @@ MESA=0
 MULTIARCH=0
 STEAM=0
 tmp_dir=$(mktemp -d -t dev-XXXXXXXXXX)  
-
+sudo apt update && sudo apt upgrade -y && sudo apt install dialog
 if dialog --yesno "Do you want to compile and install mainline Freedreno and Turnip?" 0 0; 
   then
   MESA=1
