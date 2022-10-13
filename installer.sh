@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ARCH32=arm-linux-gnueabihf
-MESAFALGS="-Dgallium-drivers=freedreno -Dvulkan-drivers=freedreno"
+MESAFALGS="-Dgallium-drivers=freedreno,zink -Dvulkan-drivers=freedreno"
 MESA=0
 MULTIARCH=0
 STEAM=0
