@@ -39,7 +39,7 @@ cd $tmp_dir
 
 if [[ "$MESA" == 1 ]];
   then
-  git clone https://gitlab.freedesktop.org/mesa/mesa && cd mesa && meson build64 $MESAFALGS && ninja -C build64/ && sudo ninja -C build64/ install
+  git clone --depth=1 https://gitlab.freedesktop.org/mesa/mesa && cd mesa && meson build64 $MESAFALGS && ninja -C build64/ && sudo ninja -C build64/ install
 fi
 
 if [[ "$MESA" == 1 ]] && [[ "$MULTIARCH" == 1 ]];
