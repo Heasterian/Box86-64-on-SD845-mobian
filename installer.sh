@@ -32,7 +32,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt build-dep mesa -y && sudo apt
 
 if [[ "$MULTIARCH" == 1 ]];
   then 
-  sudo dpkg --add-architecture armhf && sudo apt update -y && sudo apt install g++-$ARCH32 zlib1g-dev:armhf libexpat1-dev:armhf libdrm-dev:armhf libx11-dev:armhf libxext-dev:armhf libxdamage-dev:armhf libxcb-glx0-dev:armhf libx11-xcb-dev:armhf libxcb-dri2-0-dev:armhf libxcb-dri3-dev:armhf libxcb-present-dev:armhf libxshmfence-dev:armhf libxxf86vm-dev:armhf libxrandr-dev:armhf libwayland-dev:armhf wayland-protocols:armhf libwayland-egl-backend-dev:armhf libxcb-shm0-dev:armhf -y
+  sudo dpkg --add-architecture armhf && sudo apt update -y && sudo apt install g++-$ARCH32 zlib1g-dev:armhf libexpat1-dev:armhf libdrm-dev:armhf libx11-dev:armhf libxext-dev:armhf libxdamage-dev:armhf libxcb-glx0-dev:armhf libx11-xcb-dev:armhf libxcb-dri2-0-dev:armhf libxcb-dri3-dev:armhf libxcb-present-dev:armhf libxshmfence-dev:armhf libxxf86vm-dev:armhf libxrandr-dev:armhf libwayland-dev:armhf wayland-protocols:armhf pkg-config:armhf libwayland-egl-backend-dev:armhf libxcb-shm0-dev:armhf -y
 fi
 
 cd $tmp_dir
