@@ -59,6 +59,7 @@ sudo systemctl restart systemd-binfmt
 
 if [[ "$MULTIARCH" == 1 ]] && [[ "$STEAM" == 1 ]];
   then
+  sudo apt install libc6:armhf libncurses5:armhf libsdl2*:armhf libopenal*:armhf libpng*:armhf libfontconfig*:armhf libXcomposite*:armhf libbz2-dev:armhf libXtst*:armhf
   mkdir steam; cd steam; wget http://media.steampowered.com/client/installer/steam.deb; ar x steam.deb; tar xf data.tar.xz
   sudo cp -R ./usr/* /usr/
 fi
