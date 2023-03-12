@@ -18,7 +18,7 @@ if dialog --yesno "Do you want to set up multiarch and Box86 instead just Box64?
 fi
 if [[ "$MULTIARCH" == 1 ]];
   then 
-    if dialog --yesno "Do you want to install manually Steam i386 deb in /usr/ directory? Dependencies are not included as they are changing so you still will need to install them manually." 0 0;
+    if dialog --yesno "Do you want to install manually Steam i386 deb in ~/steam/ directory? Dependencies are not included as they are changing so you still will need to install them manually." 0 0;
     then 
 	STEAM=1
   fi
@@ -59,9 +59,8 @@ sudo systemctl restart systemd-binfmt
 
 if [[ "$MULTIARCH" == 1 ]] && [[ "$STEAM" == 1 ]];
   then
-  sudo apt install libc6:armhf libncurses5:armhf libsdl2*:armhf libopenal*:armhf libpng*:armhf libfontconfig*:armhf libXcomposite*:armhf libbz2-dev:armhf libXtst*:armhf
-  mkdir steam; cd steam; wget http://media.steampowered.com/client/installer/steam.deb; ar x steam.deb; tar xf data.tar.xz
-  sudo cp -R ./usr/* /usr/
+  wget https://raw.githubusercontent.com/ptitSeb/box86/master/install_steam.sh
+  bash ./install_steam.sh
 fi
 
 cd ~/ && sudo rm -R $tmp_dir
