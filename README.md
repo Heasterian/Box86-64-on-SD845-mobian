@@ -1,6 +1,10 @@
 # Box86-64-on-SD845-mobian.
 Simple guide how to use box86 and box64 on Mobian to run some i386/amd64 apps and games.
 
+!WARNING!
+
+Do not use this guide with any Android terminal emulator (like Termux) or Linux chroot/proot next to Android.
+
 Everything is inside docs. Start them in following order.
 
 1. [PREREQISITES](https://github.com/Heasterian/Box86-64-on-SD845-mobian/blob/main/docs/PREREQUISITES.md)
