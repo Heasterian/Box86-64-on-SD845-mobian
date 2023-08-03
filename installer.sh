@@ -60,6 +60,7 @@ sudo systemctl restart systemd-binfmt
 if [[ "$MULTIARCH" == 1 ]] && [[ "$STEAM" == 1 ]];
   then
   wget https://raw.githubusercontent.com/ptitSeb/box86/master/install_steam.sh
+  sudo apt install libc6:armhf libncurses6:armhf libsdl2-2.0-0:armhf libsdl2-image-2.0-0:armhf libsdl2-mixer-2.0-0:armhf libsdl2-ttf-2.0-0:armhf libopenal1:armhf libpng16-16:armhf libfontconfig1:armhf libxcomposite1:armhf libbz2-1.0:armhf libxtst6:armhf libsm6:armhf libice6:armhf libgl1:armhf libxinerama1:armhf libxdamage1:armhf
   bash ./install_steam.sh
 fi
 
