@@ -54,8 +54,7 @@ if [[ "$MULTIARCH" == 1 ]];
   then
   git clone https://github.com/ptitSeb/box86 && cd box86 && mkdir build && cd build && cmake .. -DSD845=1 && make -j8 && sudo make install && cd $tmp_dir
 fi 
-
-sudo systemctl restart systemd-binfmt
+sudo systemctl start systemd-binfmt
 
 if [[ "$MULTIARCH" == 1 ]] && [[ "$STEAM" == 1 ]];
   then
