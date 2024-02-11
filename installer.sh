@@ -6,6 +6,7 @@ MESA=0
 MULTIARCH=0
 STEAM=0
 tmp_dir=$(mktemp -d -t dev-XXXXXXXXXX)  
+VERSION=$(env -i bash -c '. /etc/os-release; echo $VERSION_CODENAME')
 sudo apt update && sudo apt upgrade -y && sudo apt install dialog
 if dialog --yesno "Do you want to compile and install mainline Freedreno and Turnip?" 0 0; 
   then
@@ -24,9 +25,9 @@ if [[ "$MULTIARCH" == 1 ]];
   fi
 fi
 
-if ! grep "deb-src http://deb.debian.org/debian/ bookworm main non-free" /etc/apt/sources.list;
+if ! grep "deb-src http://deb.debian.org/debian/ $VERSION main non-free" /etc/apt/sources.list;
   then 
-  sudo sh -c 'echo "deb-src http://deb.debian.org/debian/ bookworm main non-free" >> /etc/apt/sources.list'
+  sudo sh -c 'echo "deb-src http://deb.debian.org/debian/ $VERSION main non-free" >> /etc/apt/sources.list'
 fi
 sudo apt update && sudo apt upgrade -y && sudo apt build-dep mesa -y && sudo apt install cmake git wget -y
 
